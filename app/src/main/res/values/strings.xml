@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SpringClient</string>
+    <string name="form_titulo">Titulo</string>
+    <string name="form_descricao">Descricao</string>
+    <string name="form_dataPrevista">Data Prevista</string>
+    <string name="form_dataConclusao">Data Conclusao</string>
+    <string name="form_categoria">Categoria</string>
+    <string name="form_status">Status</string>
+    <string name="button_save_categoria">Salvar Tarefa</string>
+</resources>
