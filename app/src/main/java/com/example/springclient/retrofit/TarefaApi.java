@@ -1,6 +1,5 @@
 package com.example.springclient.retrofit;
 
-import com.example.springclient.model.Categoria;
 import com.example.springclient.model.Tarefa;
 
 import java.util.List;

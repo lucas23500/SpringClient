@@ -7,4 +7,5 @@
     <string name="form_categoria">Categoria</string>
     <string name="form_status">Status</string>
     <string name="button_save_categoria">Salvar Tarefa</string>
+    <string name="form_prioridade">Prioridade</string>
 </resources>

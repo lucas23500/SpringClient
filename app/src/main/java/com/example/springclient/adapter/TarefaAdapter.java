@@ -5,7 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.helper.widget.Layer;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.springclient.R;
@@ -33,12 +32,20 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaHolder> {
     @Override
     public void onBindViewHolder(@NonNull TarefaHolder holder, int position) {
         Tarefa tarefa = tarefaList.get(position);
+        Boolean x = tarefa.getConfirmada().booleanValue();
         holder.titulo.setText("Titulo: " + tarefa.getTitulo());
         holder.descricao.setText("Descrição: " + tarefa.getDescricao());
         holder.dataPrevista.setText("Data Prevista: " + tarefa.getDataPrevista());
         holder.dataConclusao.setText("Data Conclusão: " + tarefa.getDataConclusao());
         holder.categoria.setText("Categoria: " + tarefa.getCategoria().getTitulo());
         holder.status.setText("Status: " + tarefa.getStatus().getTitulo());
+        holder.prioridade.setText("Prioridade: " + tarefa.getPrioridade().getTitulo());
+        if(x){
+            holder.confirmada.setText("Confirmada: sim " );
+        }else {
+
+            holder.confirmada.setText("Confirmada: não " );
+        }
 
     }
 

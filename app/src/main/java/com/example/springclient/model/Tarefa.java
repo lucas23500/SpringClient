@@ -6,6 +6,7 @@ public class Tarefa {
 
     private Long id;
 
+
     private String titulo;
 
     private String descricao;
@@ -14,9 +15,16 @@ public class Tarefa {
 
     private String dataConclusao;
 
+    private Boolean confirmada;
+
+
     private Categoria categoria;
 
+
     private Status status;
+
+
+    private Prioridade prioridade;
 
     public Tarefa() {
     }
@@ -25,13 +33,16 @@ public class Tarefa {
         this.titulo = titulo;
     }
 
-    public Tarefa(String titulo, String descricao, String dataPrevista, String dataConclusao, Categoria categoria, Status status) {
+    public Tarefa(Long id, String titulo, String descricao, String dataPrevista, String dataConclusao, Boolean confirmada, Categoria categoria, Status status, Prioridade prioridade) {
+        this.id = id;
         this.titulo = titulo;
         this.descricao = descricao;
         this.dataPrevista = dataPrevista;
         this.dataConclusao = dataConclusao;
+        this.confirmada = confirmada;
         this.categoria = categoria;
         this.status = status;
+        this.prioridade = prioridade;
     }
 
     public Long getId() {
@@ -52,6 +63,14 @@ public class Tarefa {
 
     public String getDescricao() {
         return descricao;
+    }
+
+    public Prioridade getPrioridade() {
+        return prioridade;
+    }
+
+    public void setPrioridade(Prioridade prioridade) {
+        this.prioridade = prioridade;
     }
 
     public void setDescricao(String descricao) {
@@ -90,6 +109,14 @@ public class Tarefa {
         this.status = status;
     }
 
+    public Boolean getConfirmada() {
+        return confirmada;
+    }
+
+    public void setConfirmada(Boolean confirmada) {
+        this.confirmada = confirmada;
+    }
+
     @Override
     public String toString() {
         return "Tarefa{" +
@@ -98,8 +125,10 @@ public class Tarefa {
                 ", descricao='" + descricao + '\'' +
                 ", dataPrevista='" + dataPrevista + '\'' +
                 ", dataConclusao='" + dataConclusao + '\'' +
+                ", confirmada=" + confirmada +
                 ", categoria=" + categoria +
                 ", status=" + status +
+                ", prioridade=" + prioridade +
                 '}';
     }
 }

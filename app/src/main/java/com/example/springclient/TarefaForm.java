@@ -28,8 +28,6 @@ public class TarefaForm extends AppCompatActivity {
         initializeComponents();
 
 
-
-
     }
 
     private void initializeComponents() {
@@ -39,6 +37,8 @@ public class TarefaForm extends AppCompatActivity {
         TextInputEditText textInputEditDataConclusao = findViewById(R.id.form_textFieldDataConclusao);
         TextInputEditText textInputEditCategoria = findViewById(R.id.form_textFieldCategoria);
         TextInputEditText textInputEditStatus = findViewById(R.id.form_textFieldStatus);
+        TextInputEditText textInputEditPrioridade = findViewById(R.id.form_textFieldPrioridade);
+        TextInputEditText textInputEditConfirmada = findViewById(R.id.form_textFieldConfirmada);
 
         MaterialButton buttonSave = findViewById(R.id.form_buttonSave);
 
@@ -54,15 +54,15 @@ public class TarefaForm extends AppCompatActivity {
             String dataConclusao = String.valueOf(textInputEditDataConclusao.getText());
             String categoria = String.valueOf(textInputEditCategoria.getText());
             String status = String.valueOf(textInputEditStatus.getText());
-
+            String prioridade = String.valueOf(textInputEditPrioridade.getText());
+            String confirmada = String.valueOf(textInputEditConfirmada.getText());
 
             Tarefa tarefa = new Tarefa();
             tarefa.setTitulo(titulo);
             tarefa.setDescricao(descricao);
             tarefa.setDataPrevista(dataPrevista);
             tarefa.setDataConclusao(dataConclusao);
-//            tarefa.setCategoria();
-//            tarefa.setStatus(status);
+//            tarefa.setCategoriPrioridade;
 
             tarefaApi.save(tarefa)
                     .enqueue(new Callback() {
